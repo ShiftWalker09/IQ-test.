@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple IQ Test</title>
+  <title>IQ Test - 20 Questions</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,7 +12,7 @@
       padding: 20px;
     }
     .container {
-      max-width: 600px;
+      max-width: 800px;
       margin: auto;
       background-color: #fff;
       padding: 20px;
@@ -44,7 +44,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Simple IQ Test</h1>
+    <h1>IQ Test - 20 Questions</h1>
     <form id="iqTest">
       <!-- Question 1 -->
       <div class="question">
@@ -53,63 +53,4 @@
           <label><input type="radio" name="q1" value="0"> 18</label><br>
           <label><input type="radio" name="q1" value="1"> 32</label><br>
           <label><input type="radio" name="q1" value="0"> 20</label><br>
-          <label><input type="radio" name="q1" value="0"> 30</label>
-        </div>
-      </div>
-      
-      <!-- Question 2 -->
-      <div class="question">
-        <p><strong>2.</strong> What is the next number in the series: 1, 1, 2, 3, 5, ?</p>
-        <div class="options">
-          <label><input type="radio" name="q2" value="1"> 8</label><br>
-          <label><input type="radio" name="q2" value="0"> 13</label><br>
-          <label><input type="radio" name="q2" value="0"> 5</label><br>
-          <label><input type="radio" name="q2" value="0"> 4</label>
-        </div>
-      </div>
-      
-      <!-- Question 3 -->
-      <div class="question">
-        <p><strong>3.</strong> If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops definitely Lazzies?</p>
-        <div class="options">
-          <label><input type="radio" name="q3" value="1"> Yes</label><br>
-          <label><input type="radio" name="q3" value="0"> No</label>
-        </div>
-      </div>
-      
-      <input type="button" class="submit-btn" value="Submit" onclick="calculateScore()">
-    </form>
-    
-    <div id="result"></div>
-  </div>
-
-  <script>
-    function calculateScore() {
-      var totalScore = 0;
-      var totalQuestions = 3;
-      var form = document.forms["iqTest"];
-
-      // Loop through each question and check if answered correctly.
-      for (var i = 1; i <= totalQuestions; i++) {
-        var radios = form["q" + i];
-        var answered = false;
-        for (var j = 0; j < radios.length; j++) {
-          if (radios[j].checked) {
-            totalScore += parseInt(radios[j].value);
-            answered = true;
-            break;
-          }
-        }
-        if (!answered) {
-          alert("Please answer question " + i);
-          return;
-        }
-      }
-
-      var resultDiv = document.getElementById("result");
-      resultDiv.innerHTML = "Your score is " + totalScore + " out of " + totalQuestions;
-    }
-  </script>
-</body>
-</html>
-
+          <label><input type="radio" name="
